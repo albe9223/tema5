@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <style>
+        #firkant {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        #cirkel {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            line-height: 200px;
+            text-align: center;
+
+        }
+
+        img {
+
+            height: 100px;
+            width: 100px;
+
+        }
+    </style>
+
+    <div id="firkant"></div>
+    <div id="cirkel"></div>
+
+    <script>
+        let firkantURL = `http://helf-kea.dk/test/frog.png`;
+
+        let cirkelURL = `http://www.gratisskole.dk/sdata/minipic/003/00354-300.png`;
+
+        let foxURL = `http://helf-kea.dk/test/fox.png`;
+
+        document.querySelector("#firkant").innerHTML = `<img src = ${firkantURL} alt "grøn frø">`;
+
+
+        document.querySelector("#cirkel").innerHTML = `<img src = ${cirkelURL} alt "lyserød gris">`;
+
+        document.querySelector("#cirkel").innerHTML += `<img src = ${foxURL} alt "grå ræv">`;
+    </script>
+
+
+</body>
+
+</html>
