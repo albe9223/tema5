@@ -8,19 +8,50 @@
 </head>
 
 <body>
+
+
     <div id="liste">
     </div>
 
     <style>
+        img {
+
+            width: 40%;
+            height: 40%;
+            border-radius: 50%;
+
+
+        }
+
         #liste {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+
+
         }
 
         .dyr {
-            border: 1px solid black;
-            margin: 1px;
-            padding: 6px;
+            background-color: rgba(252, 191, 191, 0.35);
+            border: 1px dotted black;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        h2 {
+
+            font-size: 1.6rem;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        a {
+            font-family: monospace;
+            color: blue;
+
         }
     </style>
 
@@ -40,9 +71,10 @@
                 alleDyr.forEach(dyr => {
                     dest.innerHTML += `
                     <div class="dyr">
-                        <h3>Navn: ${dyr.navn}</h3>
-                        <p>Type: ${dyr.type} <br> Levested: ${dyr.levested}</p>
+                        <h2>Navn: ${dyr.navn}</h3>
+<a href ="http://github.com/"${dyr.github}>Github konto</a><br>
                         <img src= "${dyr.billede}">
+
                     </div>
 `;
                 })
