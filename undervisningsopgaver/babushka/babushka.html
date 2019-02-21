@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babushka</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <header class="desktop">
+        <!--Navigationsbaren på laptop-->
+        <nav class="desktop_nav"></nav>
+
+
+    </header>
+
+      <button id="klik">
+       MENU
+    </button>
+    <button id="slet">
+        Forretter
+    </button>
+    <button id="html">
+        Hovedretter
+    </button>
+    <button id="flyt">
+        Desserter
+    </button>
+     <button id="drikkevarer">
+        Drikkevarer
+    </button>
+
+
+    <div id="liste">
+    </div>
+
+
+
+
+
+    <style>
+
+        button {
+            font-size: 2rem;
+            margin: 10px;
+            font-family: monospace;
+        border: 2px solid red;
+            box-shadow: 5px 3px rgba(16, 0, 0, 0.81);
+            color: black;
+
+        }
+
+
+        .desktop_nav {
+
+        display: block;
+        padding-top: 20px;
+        background-image: url("header.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 200px;
+            width: auto;
+
+    }
+
+        html {
+
+            background-color: white;
+
+        }
+
+        img {
+
+            width: 50%;
+            height: 50%;
+            border-radius: 100%;
+
+
+        }
+
+        #liste {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .retter {
+            /*            background-color: rgba(195, 195, 195, 0.72);*/
+
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        p {
+            font-family: monospace;
+            color: #080000;
+
+
+        }
+
+        h2 {
+            color: #100000;
+            font-size: 1.7rem;
+            font-family: monospace, bold;
+
+        }
+
+        h3 {
+            color: #100000;
+            font-family: monospace, bold;
+
+        }
+
+    </style>
+
+    <script>
+        let alleRetter = [];
+        document.addEventListener("DOMContentLoaded", start);
+        let dest = document.querySelector("#liste");
+        let read = document.querySelector("#readmore");
+
+        function start() {
+
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1jxxxFoWBuMJ1qhQ9BQIAyKHmP38XtAF9_sQr0xo5JLo");
+                alleRetter = await jsonData.json();
+                visRetter();
+            }
+
+            function visRetter() {
+                alleRetter.forEach(retter => {
+                    dest.innerHTML += `
+                    <div class="retter">
+                        <h2>${retter.navn}</h2>
+<img src= "imgs/small/${retter.billede}-sm.jpg">
+<p>${retter.kort}</p>
+<p>Pris: ${retter.pris}</p>
+
+<h3>LÆS MERE</h3>
+<div id="readmore">
+
+
+                    </div>
+   </div>
+`;
+                })
+            }
+            getJson()
+        }
+
+        document.querySelector("#readmore").addEventListener("click", readMore);
+
+        function readMore() {
+            dest.textContent = `${retter.lang}`;
+
+        }
+
+    </script>
+</body>
+
+</html>

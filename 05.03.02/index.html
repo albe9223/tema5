@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="DA">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+
+    <title></title>
+
+
+
+</head>
+
+<body>
+
+
+    <div id="popup">
+        <div id="luk"><button>X</button></div>
+        <div id="indhold"></div>
+
+    </div>
+    <div class="logo"></div>
+
+    <div id="overskrift">ALLE</div>
+
+
+    <div class="background">
+
+        <div class="menu">
+
+            <button class="filter valgt" data-ret=alle>ALLE</button>
+            <button class="filter valgt" data-ret=forretter>FORRETTER</button>
+            <button class="filter" data-ret="hovedretter">HOVEDRETTER</button>
+            <button class="filter" data-ret="desserter">DESSERTER</button>
+            <button class="filter" data-ret="kontakt">KONTAKT</button>
+
+
+
+
+        </div>
+
+
+
+
+        <div id="retter"></div>
+
+
+
+
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", start);
+
+            let retter;
+            let dest = document.querySelector("#retter");
+            let filter = "alle";
+
+            async function start() {
+                const myJson = await fetch("filer.json");
+                retter = await myJson.json();
+                visRetter();
+            }
+
+            function visRetter() {
+                dest.innerHTML = "";
+                retter.forEach(ret => {
+                    if (filter == "alle" || filter == ret.kategori) {
+                        let template = `
+                    <article class="ret">
+                        <img src="mad/${ret.billede}" alt=${ret.navn}">
+                        <h2>${ret.navn}</h2>
+                        <p>${ret.pris}</p>
+                    </article>`;
+
+
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", åbn);
+
+                        function åbn() {
+
+                            document.querySelector("#indhold").innerHTML = `
+<article class="ret">
+<img src="mad/${ret.billede}" alt=${ret.navn}">
+<h2>${ret.navn}</h2>
+<p>${ret.pris}</p>
+<h3>${ret.beskrivelse}</h3>
+
+        </article>`;
+
+                            document.querySelector("#popup").style.display = "block";
+                        }
+
+                    }
+                })
+            } //function visRetter slut
+
+            document.querySelector("#luk button").addEventListener("click", () => {
+                document.querySelector("#popup").style.display = "none";
+            })
+
+            start();
+
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+
+            function filtrering() {
+
+                filter = this.getAttribute("data-ret");
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+
+
+                document.querySelector("#overskrift").textContent = this.textContent;
+
+                visRetter();
+            }
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>

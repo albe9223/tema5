@@ -1,0 +1,164 @@
+[{
+        "navn": "DERHO",
+
+        "pris": "95DKK",
+
+        "billede": "derho.jpg",
+
+        "kategori": "forretter"
+
+},
+
+    {
+        "navn": "ZELZEL",
+
+        "pris": "125DKK",
+
+        "billede": "zelzel.jpg",
+
+        "kategori": "forretter"
+
+},
+
+    {
+        "navn": "FETFET",
+
+        "pris": "80DKK",
+
+        "billede": "fetfet.jpg",
+
+        "kategori": "forretter"
+
+},
+
+    {
+        "navn": "BOZENA",
+
+        "pris": "50DKK",
+
+        "billede": "bozena.jpg",
+
+        "kategori": "forretter"
+
+},
+
+    {
+        "navn": "ZEGNI",
+
+        "pris": "150DKK",
+
+        "billede": "zegni.jpg",
+
+        "kategori": "hovedretter"
+
+},
+
+    {
+        "navn": "ASMARA",
+
+        "pris": "125DKK",
+
+        "billede": "asmara.jpg",
+
+        "kategori": "hovedretter"
+
+},
+
+    {
+        "navn": "HAMLI BESGA",
+
+        "pris": "80DKK",
+
+        "billede": "hamli.jpg",
+
+        "kategori": "hovedretter"
+
+
+},
+
+
+    {
+        "navn": "ALICHA",
+
+        "pris": "80DKK",
+
+        "billede": "alicha.jpg",
+
+        "kategori": "hovedretter"
+
+},
+
+
+
+    {
+        "navn": "MENCHET",
+
+        "pris": "115DKK",
+
+        "billede": "mnchet.jpg",
+
+        "kategori": "hovedretter"
+
+
+},
+
+    {
+        "navn": "TEBSI",
+
+        "pris": "135DKK",
+
+        "billede": "tebsi.jpg",
+
+        "kategori": "hovedretter"
+
+},
+
+
+
+    {
+        "navn": "INJERA",
+
+        "pris": "80DKK",
+
+        "billede": "injera.jpg",
+
+        "kategori": "desserter"
+
+
+},
+
+    {
+        "navn": "HOETI",
+
+        "pris": "125DKK",
+
+        "billede": "hoeti.jpg",
+
+        "kategori": "desserter"
+
+},
+
+    {
+        "navn": "PUDDING",
+
+        "pris": "80DKK",
+
+        "billede": "pudding.jpg",
+
+        "kategori": "desserter"
+
+
+},
+
+    {
+        "navn": "MANDAZI",
+
+        "pris": "80DKK",
+
+        "billede": "mandazi.jpg",
+
+        "kategori": "desserter"
+
+}
+
+ ]
