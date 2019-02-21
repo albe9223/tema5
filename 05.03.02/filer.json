@@ -5,7 +5,9 @@
 
         "billede": "derho.jpg",
 
-        "kategori": "forretter"
+        "kategori": "forretter",
+
+        "beskrivelse": "Gryderet med kylling, der har simret i berbere, tesmi, hvidløg, ingefær, løg og andre eksotiske krydderier"
 
 },
 
@@ -16,7 +18,11 @@
 
         "billede": "zelzel.jpg",
 
-        "kategori": "forretter"
+        "kategori": "forretter",
+
+
+        "beskrivelse": "Forskellige traditionelle retter med injera (lam, okse og kyllingekød samt vegetarretter som spinat, linser, kartofler, gulerødder)"
+
 
 },
 
@@ -27,7 +33,9 @@
 
         "billede": "fetfet.jpg",
 
-        "kategori": "forretter"
+        "kategori": "forretter",
+
+        "beskrivelse": "Smuldret injera med Zegni"
 
 },
 
@@ -38,7 +46,9 @@
 
         "billede": "bozena.jpg",
 
-        "kategori": "forretter"
+        "kategori": "forretter",
+
+        "beskrivelse": "Flækærter blandet med oksekød, berbere, løg, hvidløg, ingefær"
 
 },
 
@@ -49,7 +59,9 @@
 
         "billede": "zegni.jpg",
 
-        "kategori": "hovedretter"
+        "kategori": "hovedretter",
+
+        "beskrivelse": "Lammekød marineret i hvidvin og tilberedt med løg, hvidløg, rosmarin og grøn chili med awaze"
 
 },
 
@@ -60,7 +72,9 @@
 
         "billede": "asmara.jpg",
 
-        "kategori": "hovedretter"
+        "kategori": "hovedretter",
+
+        "beskrivelse": "Kylling, grøn chili, løg, hvidløg, smør, krydderier"
 
 },
 
@@ -71,7 +85,9 @@
 
         "billede": "hamli.jpg",
 
-        "kategori": "hovedretter"
+        "kategori": "hovedretter",
+
+        "beskrivelse": "Oksekødsstrimler tilberedt med spinat, løg, ingefær og hvidløg"
 
 
 },
@@ -84,7 +100,9 @@
 
         "billede": "alicha.jpg",
 
-        "kategori": "hovedretter"
+        "kategori": "hovedretter",
+
+        "beskrivelse": "Krydderet kylling med paprika og chilli, dertil pølse af vildt samt salat af kål og bønner"
 
 },
 
@@ -97,7 +115,9 @@
 
         "billede": "mnchet.jpg",
 
-        "kategori": "hovedretter"
+        "kategori": "hovedretter",
+
+        "beskrivelse": "Gryderet af lam, pickles, gulerødder og champingnon"
 
 
 },
@@ -109,7 +129,9 @@
 
         "billede": "tebsi.jpg",
 
-        "kategori": "hovedretter"
+        "kategori": "hovedretter",
+
+        "beskrivelse": "Benfri fiskestykker kogt med løg, tomater, hvidløg, ingefær og krydderier"
 
 },
 
@@ -122,7 +144,11 @@
 
         "billede": "injera.jpg",
 
-        "kategori": "desserter"
+        "kategori": "desserter",
+
+        "beskrivelse": "Injirra er let syrlige, meget tynde madbrød, der ligner gigantiske pandekager og bliver serveret i farvestrålende selskab af blommekompot"
+
+
 
 
 },
@@ -134,7 +160,9 @@
 
         "billede": "hoeti.jpg",
 
-        "kategori": "desserter"
+        "kategori": "desserter",
+
+        "beskrivelse": "Gulerødder glaseret i honning og sesam"
 
 },
 
@@ -145,7 +173,9 @@
 
         "billede": "pudding.jpg",
 
-        "kategori": "desserter"
+        "kategori": "desserter",
+
+        "beskrivelse": "En ganske anderledes svampet kage. Serveres lun med flødeskum og frugt"
 
 
 },
@@ -157,7 +187,9 @@
 
         "billede": "mandazi.jpg",
 
-        "kategori": "desserter"
+        "kategori": "desserter",
+
+        "beskrivelse": "Mandazi er nærmest en nationalret for Swahili-folket. De kan spises sammen med næsten al slags mad eller som en selvstændig snack. Vi serverer den med puddersukker og en dip af saltkaramel"
 
 }
 

@@ -21,13 +21,16 @@
         <div id="luk"><button>X</button></div>
         <div id="indhold"></div>
 
+
     </div>
     <div class="logo"></div>
 
-    <div id="overskrift">ALLE</div>
-
-
     <div class="background">
+
+        <div id="overskrift">ALLE</div>
+
+
+
 
         <div class="menu">
 
@@ -48,7 +51,7 @@
         <div id="retter"></div>
 
 
-
+        <div id="drikkevarer">Please ask our staff for our current selection of beverages</div>
 
 
 
@@ -84,7 +87,7 @@
 
                             document.querySelector("#indhold").innerHTML = `
 <article class="ret">
-<img src="mad/${ret.billede}" alt=${ret.navn}">
+<img id="popup_img" src="mad/${ret.billede}" alt=${ret.navn}">
 <h2>${ret.navn}</h2>
 <p>${ret.pris}</p>
 <h3>${ret.beskrivelse}</h3>

@@ -1,13 +1,16 @@
-/*
 .background {
 
-    width: 0;
-    height: 0;
-    border-bottom: 100px solid #D00DA7;
-    border-left: 100px solid transparent;
+    background-image: url(mad/trekant.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*
+    background-size: cover;
+    background-repeat: no-repeat;
+*/
 
 }
-*/
+
 
 .logo {
 
@@ -25,6 +28,7 @@
     display: flex;
     flex-direction: column;
     margin-top: -60px;
+    width: 200px;
 
 
 }
@@ -64,7 +68,7 @@ button:hover {
 
 .ret {
 
-    margin: 0px 100px 20px 100px;
+    margin: 0px 150px 20px 150px;
     padding: 10px 60px;
     display: flex;
     flex-direction: column;
@@ -77,6 +81,13 @@ img {
     height: 300px;
     -webkit-transform: rotate(45deg);
     border: 5px solid #D00DA7;
+
+}
+
+#popup_img {
+
+    margin-top: 100px;
+
 }
 
 h2 {
@@ -94,29 +105,45 @@ h2 {
     height: 100vh;
     position: fixed;
     z-index: 100;
-    background-color: #D00DA7;
 
 }
 
 #indhold {
 
     box-sizing: border-box;
-    background-color: white;
+    background-color: #ffff00;
     width: 90vw;
     height: 90vh;
     margin: auto;
+    border-right: 20px solid #174B7D;
+    border-bottom: 40px solid #174B7D;
+
 }
+
+/*
+#blue_box {
+
+    box-sizing: border-box;
+    background-color: #174B7D;
+    width: 110vw;
+    height: 90vh;
+    margin: auto;
+}
+*/
+
 
 #luk {
     box-sizing: border-box;
     text-align: right;
     padding-right: 1em;
+
 }
 
 #luk button {
 
     font-size: 2em;
     font-family: 'teko';
+    background-color: #ffff00;
 
 
 }
@@ -137,7 +164,7 @@ p {
     font-family: 'teko';
     color: #174C7D;
     font-size: 2rem;
-/*    margin-top: -60px;*/
+    margin-top: -60px;
 
 }
 
@@ -145,6 +172,16 @@ h3 {
 
     font-family: 'teko';
     color: #174C7D;
-    font-size: 2rem;
+    font-size: 2.6rem;
+    font-weight: 100;
+    text-align: center;
+    margin-top: -20px;
+}
+
+#drikkevarer {
+    font-family: 'teko';
+    color: #174C7D;
+    font-size: 2.6rem;
+    text-align: center;
 
 }
