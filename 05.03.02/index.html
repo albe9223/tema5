@@ -25,54 +25,49 @@
     </div>
     <div class="logo"></div>
 
-    <div class="background">
 
-        <div id="overskrift">ALLE</div>
-
-
-
-
-        <div class="menu">
-
-            <button class="filter valgt" data-ret=alle>ALLE</button>
-            <button class="filter valgt" data-ret=forretter>FORRETTER</button>
-            <button class="filter" data-ret="hovedretter">HOVEDRETTER</button>
-            <button class="filter" data-ret="desserter">DESSERTER</button>
-            <button class="filter" data-ret="kontakt">KONTAKT</button>
+    <div id="overskrift">ALLE</div>
 
 
 
 
-        </div>
+    <div class="menu">
+
+        <button class="filter valgt" data-ret=alle>ALLE</button>
+        <button class="filter valgt" data-ret=forretter>FORRETTER</button>
+        <button class="filter" data-ret="hovedretter">HOVEDRETTER</button>
+        <button class="filter" data-ret="desserter">DESSERTER</button>
+
+    </div>
 
 
 
 
-        <div id="retter"></div>
+    <div id="retter"></div>
 
 
-        <div id="drikkevarer">Please ask our staff for our current selection of beverages</div>
+    <div id="drikkevarer">Please ask our staff for our current selection of beverages</div>
 
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", start);
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
 
-            let retter;
-            let dest = document.querySelector("#retter");
-            let filter = "alle";
+        let retter;
+        let dest = document.querySelector("#retter");
+        let filter = "alle";
 
-            async function start() {
-                const myJson = await fetch("filer.json");
-                retter = await myJson.json();
-                visRetter();
-            }
+        async function start() {
+            const myJson = await fetch("filer.json");
+            retter = await myJson.json();
+            visRetter();
+        }
 
-            function visRetter() {
-                dest.innerHTML = "";
-                retter.forEach(ret => {
-                    if (filter == "alle" || filter == ret.kategori) {
-                        let template = `
+        function visRetter() {
+            dest.innerHTML = "";
+            retter.forEach(ret => {
+                if (filter == "alle" || filter == ret.kategori) {
+                    let template = `
                     <article class="ret">
                         <img src="mad/${ret.billede}" alt=${ret.navn}">
                         <h2>${ret.navn}</h2>
@@ -80,12 +75,12 @@
                     </article>`;
 
 
-                        dest.insertAdjacentHTML("beforeend", template);
-                        dest.lastElementChild.addEventListener("click", åbn);
+                    dest.insertAdjacentHTML("beforeend", template);
+                    dest.lastElementChild.addEventListener("click", åbn);
 
-                        function åbn() {
+                    function åbn() {
 
-                            document.querySelector("#indhold").innerHTML = `
+                        document.querySelector("#indhold").innerHTML = `
 <article class="ret">
 <img id="popup_img" src="mad/${ret.billede}" alt=${ret.navn}">
 <h2>${ret.navn}</h2>
@@ -94,40 +89,72 @@
 
         </article>`;
 
-                            document.querySelector("#popup").style.display = "block";
-                        }
-
+                        document.querySelector("#popup").style.display = "block";
                     }
-                })
-            } //function visRetter slut
 
-            document.querySelector("#luk button").addEventListener("click", () => {
-                document.querySelector("#popup").style.display = "none";
+                }
             })
+        } //function visRetter slut
 
-            start();
+        document.querySelector("#luk button").addEventListener("click", () => {
+            document.querySelector("#popup").style.display = "none";
+        })
 
+        start();
+
+        document.querySelectorAll(".filter").forEach(elm => {
+            elm.addEventListener("click", filtrering);
+        })
+
+
+        function filtrering() {
+
+            filter = this.getAttribute("data-ret");
             document.querySelectorAll(".filter").forEach(elm => {
-                elm.addEventListener("click", filtrering);
+                elm.classList.remove("valgt");
             })
+            this.classList.add("valgt");
 
 
-            function filtrering() {
+            document.querySelector("#overskrift").textContent = this.textContent;
 
-                filter = this.getAttribute("data-ret");
-                document.querySelectorAll(".filter").forEach(elm => {
-                    elm.classList.remove("valgt");
-                })
-                this.classList.add("valgt");
+            visRetter();
+        }
+
+    </script>
+
+    <footer>
+
+        <div class="sectionwrapper">
 
 
-                document.querySelector("#overskrift").textContent = this.textContent;
+            <ul>
+                <li>MONDAYS: CLOSED</li>
+                <li>TUESDAY-THURSDAY: 17:00 - 22:00 (NO RESERVATIONS)</li>
+                <li>FRIDAYS: 12:00 - 14:30 AND 17:00 - 22:00 (NO RESERVATIONS)
+                </li>
+                <li>SATURDAYS: 12:00 - 14:30 AND 17:00 - 22:00 (NO RESERVATIONS)
+                </li>
+                <li>SUNDAYS: 12:00 - 14:30 AND 17:00 - 22:00 (NO RESERVATIONS)
+                </li>
 
-                visRetter();
-            }
-        </script>
+            </ul>
 
-    </div>
+            <ul>
+                <li>Guldbergsgade 51B, 2200 København N
+                </li>
+                <li>africanfood@gmail.com</li>
+                <li>tlf.: +45 20788456</li>
+                <li>Guldbergsgade 51B, 2200 København N
+                </li>
+                <li>Please call or write if you have any questions</li>
+
+            </ul>
+
+
+        </div>
+
+    </footer>
 
 
 </body>
