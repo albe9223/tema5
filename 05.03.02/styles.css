@@ -15,6 +15,11 @@ body {
 
 }
 
+html{
+
+    overflow-x: hidden;
+
+}
 
 .logo {
 
@@ -73,7 +78,7 @@ button:hover {
 
 .ret {
 
-    margin: 0px 150px 20px 150px;
+    margin: 0px 0px 100px 100px;
     padding: 10px 60px;
     display: flex;
     flex-direction: column;
@@ -81,9 +86,9 @@ button:hover {
 
 }
 
-img {
-    width: 300px;
-    height: 300px;
+.ret img {
+    width: 350px;
+    height: 350px;
     -webkit-transform: rotate(45deg);
     border: 5px solid #08D8D0;
 
@@ -101,6 +106,7 @@ h2 {
     font-weight: 400;
     color: #174C7D;
     font-size: 4rem;
+   margin-top: 70px;
 
 }
 
@@ -111,8 +117,10 @@ h2 {
     position: fixed;
     z-index: 100;
     display: none;
+    margin-top: 80px;
 
 }
+
 
 #indhold {
 
@@ -237,13 +245,14 @@ h3 {
             }
 
 
-img {
-    width: 200px;
-    height: 200px;
+.ret img {
+    width: 350px;
+    height: 350px;
 
 }
 
-           .logo{
+
+    .logo{
 
            display: block;
     background-image: url("mad/cover_logo.png");
@@ -263,18 +272,21 @@ img {
  @media screen and (max-width: 320px) {
 
 
-        .logo{
 
-           display: block;
+    .logo{
+
+    display: block;
     background-image: url("mad/cover_logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     height: 187px;
+        width: auto;
     z-index: 1000;
     margin-top: -68px;
 
 }
+
 
      #indhold {
 
@@ -292,20 +304,15 @@ img {
 
  h3 {
             font-size: 1rem;
+         text-align: left;
 
         }
 
       h2 {
             font-size: 3rem;
+          margin-top: 40px
 
         }
-
-
-     #popup_img {
-    margin-top: 50px;
-         left: 90px;
-
-}
 
 
  button {
@@ -314,7 +321,7 @@ img {
     text-decoration: none;
     color: #174C7D;
     font-family: 'teko', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0px 20px;
     cursor: pointer;
     border: none;
@@ -324,7 +331,14 @@ img {
 
 }
 
-       #overskrift {
+  #popup_img{
+
+         height: 150px;
+         width: 150px;
+
+     }
+
+#overskrift {
             font-size: 4rem;
            margin-top: -70px;
                z-index: 1000;
@@ -339,4 +353,39 @@ img {
     width: 100px;
 }
 
+
+ .sectionwrapper {
+
+
+    height: 400px;
+    margin-top: 30px;
+        background-color: #ffff00;
+    border-right: 10px solid #174B7D;
+    border-bottom: 20px solid #174B7D;
+}
+
+.sectionwrapper li{
+
+
+  font-size: 1rem;
+}
+
+
+#drikkevarer {
+    font-family: 'teko';
+    color: #174C7D;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: -130px;
+
+}
+
+     .ret {
+     margin: 0;
     }
+
+     .ret img {
+    width: 200px;
+    height: 200px;
+
+}
