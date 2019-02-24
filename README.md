@@ -1,1 +1,1 @@
-Link til færdigt site: https://github.com/albe9223/tema5/tree/master/05.03.02
+Link til færdigt site: http://alberteegholm.dk/kea/GitHub/tema5/05.03.02/
