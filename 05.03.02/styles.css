@@ -1,23 +1,28 @@
-body {
+*{
 
-/*
-    background-image: url(mad/trekant.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left 0 top 342px;
-*/
-    /*    background-attachment: fixed;*/
-    /*    padding-top: 500px;*/
-    /*
-    background-size: cover;
-    background-repeat: no-repeat;
-*/
+    padding: 0;
+    margin: 0;
+}
+
+
+.baggrund img{
+
+  width: 100vw;
+    height: 100vh;
+
+}
+
+.baggrund{
+
+    position: fixed;
+     z-index: 0;
 
 }
 
 html{
 
     overflow-x: hidden;
+
 
 }
 
@@ -29,7 +34,8 @@ html{
     background-repeat: no-repeat;
     background-size: contain;
     height: 400px;
-    z-index: 1000;
+    z-index: 100;
+    position: relative;
     margin-top: -35px;
 
 }
@@ -39,6 +45,8 @@ html{
     flex-direction: column;
     margin-top: -60px;
     width: 200px;
+    position: relative;
+    z-index: 10;
 
 
 }
@@ -83,6 +91,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 10;
 
 }
 
@@ -157,6 +167,7 @@ h2 {
     font-size: 8rem;
     text-align: center;
     letter-spacing: 10px;
+    position: relative;
 
 }
 
@@ -165,7 +176,6 @@ p {
     font-family: 'teko';
     color: #174C7D;
     font-size: 2rem;
-    margin-top: -60px;
 
 }
 
@@ -199,7 +209,7 @@ h3 {
 
 }
 
-.sectionwrapper {
+footer {
 
     display: flex;
     flex-wrap: wrap;
@@ -214,7 +224,7 @@ h3 {
 }
 
 
-.sectionwrapper li {
+footer li {
 
     display: flex;
     justify-content: center;
@@ -351,9 +361,24 @@ h3 {
     flex-direction: column;
     margin-top: -20px;
     width: 100px;
+    position: relative;
+    z-index: 10;
 }
 
+     footer{
 
+          height: 400px;
+    margin-top: 30px;
+        background-color: #ffff00;
+    border-right: 10px solid #174B7D;
+    border-bottom: 20px solid #174B7D;
+     z-index: 10;
+     position: relative;
+
+
+     }
+
+/*
  .sectionwrapper {
 
 
@@ -362,9 +387,12 @@ h3 {
         background-color: #ffff00;
     border-right: 10px solid #174B7D;
     border-bottom: 20px solid #174B7D;
+     z-index: 10;
+     position: relative;
 }
 
-.sectionwrapper li{
+*/
+footer li{
 
 
   font-size: 1rem;
