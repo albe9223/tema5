@@ -18,6 +18,7 @@
 
     <div class="baggrund"><img src="mad/baggrund.gif" alt="baggrund"></div>
 
+
     <div id="popup">
         <div id="luk"><button>X</button></div>
         <div id="indhold"></div>
@@ -29,7 +30,7 @@
 
     <div id="overskrift">ALLE</div>
 
-
+   <div class="corner_pic"></div>
 
 
     <div class="menu">
@@ -91,6 +92,7 @@
         </article>`;
 
                         document.querySelector("#popup").style.display = "block";
+
                     }
 
                 }
@@ -99,6 +101,7 @@
 
         document.querySelector("#luk button").addEventListener("click", () => {
             document.querySelector("#popup").style.display = "none";
+
         })
 
         start();
@@ -131,8 +134,7 @@
         <ul>
             <li>MONDAYS: CLOSED</li>
             <li>TUESDAY-THURSDAY: 17:00 - 22:00 (NO RESERVATIONS)</li>
-            <li>FRIDAYS: 12:00 - 14:30 AND 17:00 - 22:00 (NO RESERVATIONS)
-            </li>
+            <li>FRIDAYS: 12:00 - 14:30 AND 17:00 - 22:00 (NO RESERVATIONS)</li>
             <li>SATURDAYS: 12:00 - 14:30 AND 17:00 - 22:00 (NO RESERVATIONS)
             </li>
             <li>SUNDAYS: 12:00 - 14:30 AND 17:00 - 22:00 (NO RESERVATIONS)
@@ -150,8 +152,6 @@
             <li>Please call or write if you have any questions</li>
 
         </ul>
-
-
     </footer>
 
 
