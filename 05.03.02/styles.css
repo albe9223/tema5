@@ -224,6 +224,7 @@ h3 {
     color: #174C7D;
     font-size: 2.6rem;
     text-align: center;
+    position: relative;
 
 }
 
@@ -262,6 +263,7 @@ audio {
     height: 25px;
 
 }
+
 
 /*------------------------------------------------- MEDIA-LARS -------------------------------------------------------------*/
 
@@ -331,7 +333,7 @@ audio {
     .logo {
 
         display: block;
-        background-image: url("mad/poapoa.png.png");
+        background-image: url("mad/udvalg_eget.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
