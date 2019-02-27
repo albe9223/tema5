@@ -25,12 +25,15 @@
 
 
     </div>
-    <div class="logo"></div>
+
+    <a href="index.html">
+        <div class="logo"></div>
+    </a>
 
 
     <div id="overskrift">ALLE</div>
 
-   <div class="corner_pic"></div>
+    <div class="corner_pic"></div>
 
 
     <div class="menu">
@@ -39,6 +42,7 @@
         <button class="filter valgt" data-ret=forretter>FORRETTER</button>
         <button class="filter" data-ret="hovedretter">HOVEDRETTER</button>
         <button class="filter" data-ret="desserter">DESSERTER</button>
+        <button class="filter" data-ret="kontakt">KONTAKT</button>
 
     </div>
 
@@ -74,6 +78,8 @@
                         <img src="mad/${ret.billede}" alt=${ret.navn}">
                         <h2>${ret.navn}</h2>
                         <p>${ret.pris}</p>
+ <h4>${ret.kontakt}</h4>
+
                     </article>`;
 
 
@@ -88,6 +94,7 @@
 <h2>${ret.navn}</h2>
 <p>${ret.pris}</p>
 <h3>${ret.beskrivelse}</h3>
+<h4>${ret.kontakt}</h4>
 
         </article>`;
 
@@ -124,10 +131,10 @@
 
             visRetter();
         }
+
     </script>
 
     <footer>
-
 
 
 
@@ -152,6 +159,7 @@
             <li>Please call or write if you have any questions</li>
 
         </ul>
+
     </footer>
 
 

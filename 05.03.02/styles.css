@@ -105,7 +105,7 @@ button:hover {
 
 .ret {
 
-    margin: 40px 100px 0px 100px;
+    margin: 20px 100px 10px 100px;
     padding: 10px 60px;
     display: flex;
     flex-direction: column;
@@ -119,7 +119,7 @@ button:hover {
     width: 350px;
     height: 350px;
     -webkit-transform: rotate(45deg);
-    border: 5px solid #08D8D0;
+    border: 8px solid #00ffff;
 
 }
 
@@ -190,6 +190,7 @@ h2 {
     text-align: center;
     letter-spacing: 10px;
     position: relative;
+    margin-top: 40px;
 
 }
 
@@ -293,10 +294,11 @@ audio {
     .logo {
 
         display: block;
-        background-image: url("mad/poapoa.png.png");
+        background-image: url("mad/udvalg_eget.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        max-width: 768px;
         height: 187px;
         z-index: 10;
 
@@ -322,7 +324,7 @@ audio {
 
 /*--------------- Mobil -------------------*/
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
 
 
 
@@ -334,7 +336,7 @@ audio {
         background-repeat: no-repeat;
         background-size: contain;
         height: 187px;
-        width: auto;
+/*        max-width: 320px;*/
         z-index: 10;
         margin-top: -68px;
 
@@ -353,7 +355,7 @@ audio {
 
 
     h3 {
-        font-size: 0.5rem;
+        font-size: 1.3rem;
         text-align: left;
         text-align: center;
 
